@@ -14,10 +14,6 @@ class AREOI_Styles
 	{
 		self::$initiated = true;
 
-		if ( areoi2_get_option( 'areoi-dashboard-global-disable-all-assets', false ) ) {
-			return;
-		}
-
 		if ( is_admin() ) {
 			add_action( 'admin_enqueue_scripts', array( 'AREOI_Styles', 'enqueue_custom_admin_style' ) );
 		} else {
@@ -45,10 +41,12 @@ class AREOI_Styles
     	wp_enqueue_style( 'dashicons' );
 
     	$css_enqueues = array(
-    		'areoi-bootstrap' 	=> 'assets/css/editor-bootstrap.min.css',
     		'areoi-index' 		=> 'build/index.css',
     		'areoi-select2' 	=> 'assets/css/select2.min.css'
     	);
+    	if ( ! areoi2_get_option( 'areoi-dashboard-global-disable-all-assets', false ) ) {
+    		$css_enqueues = array( 'areoi-bootstrap' => 'assets/css/editor-bootstrap.min.css' ) + $css_enqueues;
+    	}
     	areoi_enqueue_css( $css_enqueues );
 
     	$js_enqueues = array(
@@ -123,6 +121,10 @@ class AREOI_Styles
 
 	public static function enqueue_custom_style()
 	{
+		if ( areoi2_get_option( 'areoi-dashboard-global-disable-all-assets', false ) ) {
+			return;
+		}
+
 		if ( areoi2_get_option( 'areoi-dashboard-global-bootstrap-css', 1 ) ) {
 			$css_enqueues = array(
 	    		'areoi-bootstrap' 	=> 'assets/css/bootstrap.min.css',
@@ -211,6 +213,10 @@ class AREOI_Styles
 
 	public static function add_block_styles()
 	{
+		if ( areoi2_get_option( 'areoi-dashboard-global-disable-all-assets', false ) ) {
+			return;
+		}
+
 		$xs = str_replace( 'px', '', areoi2_get_option( 'areoi-layout-grid-grid-breakpoint-xs', 0 ) );
 		$sm = str_replace( 'px', '', areoi2_get_option( 'areoi-layout-grid-grid-breakpoint-sm', 576 ) );
 		$md = str_replace( 'px', '', areoi2_get_option( 'areoi-layout-grid-grid-breakpoint-md', 768 ) );

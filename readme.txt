@@ -4,7 +4,7 @@ Tags: Bootstrap, Bootstrap Blocks, Bootstrap 5
 Requires at least: 5
 Tested up to: 6.8
 Requires PHP: 7.0
-Stable tag: 1.3.31
+Stable tag: 2.0.0
 License: GPL v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -111,6 +111,10 @@ Bootstrap is included. However you have the ability to switch this off in your W
 [Please add any feature requests or bugs within the support section.](https://wordpress.org/support/plugin/all-bootstrap-blocks/)
 
 == Changelog ==
+
+= 2.0.0 =
+* FEATURE: Added Bootstrap 5.3.8 and set it as the new default version (was 5.0.2).
+* FEATURE: Added a 'Disable all plugin scripts and stylesheets' option in Dashboard > Global for sites that bundle Bootstrap themselves.
 
 = 1.3.31 =
 * https://wordpress.org/support/topic/block-editor-background-color-is-being-set-to-red/

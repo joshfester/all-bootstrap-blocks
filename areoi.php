@@ -1,7 +1,7 @@
 <?php
 /**
  * @package All Bootstrap Blocks
- * @version 1.3.31
+ * @version 2.0.0
  * 
  * Plugin Name:     All Bootstrap Blocks
  * Text Domain:     all-bootstrap-blocks
@@ -9,12 +9,12 @@
  * Description:     Create fully responsive Bootstrap 5 page layouts. 37 free blocks including containers, rows, columns, modals, accordions, cards, buttons and much more.
  * Author:          AREOI
  * Author URI:      https://areoi.io/
- * Version:         1.3.31
+ * Version:         2.0.0
  * License:         GPL v2 or later
  * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
 */
 
-$areoi_version = '1.3.31';
+$areoi_version = '2.0.0';
 
 // Make sure we don't expose any info if called directly
 if ( !function_exists( 'add_action' ) ) {

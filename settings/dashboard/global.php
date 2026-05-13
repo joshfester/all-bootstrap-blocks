@@ -10,18 +10,29 @@ $slug = AREOI__PREPEND . ( !empty( $section ) ? '-' . $section : '' )  . '-globa
 
 return array(
 	array(
+		'label' => 'Disable all plugin scripts and stylesheets',
+		'name' => $slug . 'disable-all-assets',
+		'variable' => '',
+		'row' => 'default',
+		'input' => 'checkbox',
+		'default' => false,
+		'description' => 'If checked, this plugin will not enqueue any CSS or JS — on the frontend OR in the block editor. Use this only if you are bundling Bootstrap (and the plugin\'s styles) yourself. WARNING: with this enabled, the Gutenberg block editor UI for these blocks will not be styled or fully functional.',
+		'allow_reset' => false,
+		'options' => array()
+	),
+	array(
 		'label' => 'Bootstrap Version',
 		'name' => $slug . 'bootstrap-version',
 		'variable' => '',
 		'row' => 'default',
 		'input' => 'select',
-		'default' => '5.0.2',
+		'default' => '5.3.8',
 		'description' => 'Choose the version number of Bootstrap you would like to include.',
 		'allow_reset' => false,
 		'options' => array(
 			array(
 				'id'			=> '5.0.2',
-				'label' 		=> '5.0.2 (Default)',
+				'label' 		=> '5.0.2',
 				'description' 	=> null
 			),
 			array(
@@ -32,6 +43,11 @@ return array(
 			array(
 				'id'			=> '5.3.3',
 				'label' 		=> '5.3.3 (Beta)',
+				'description' 	=> null
+			),
+			array(
+				'id'			=> '5.3.8',
+				'label' 		=> '5.3.8 (Default)',
 				'description' 	=> null
 			),
 		)

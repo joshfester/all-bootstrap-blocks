@@ -10,9 +10,13 @@ class AREOI_Styles
 		}
 	}
 
-	private static function init_hooks() 
+	private static function init_hooks()
 	{
 		self::$initiated = true;
+
+		if ( areoi2_get_option( 'areoi-dashboard-global-disable-all-assets', false ) ) {
+			return;
+		}
 
 		if ( is_admin() ) {
 			add_action( 'admin_enqueue_scripts', array( 'AREOI_Styles', 'enqueue_custom_admin_style' ) );

@@ -3,10 +3,9 @@ $get_section = sanitize_text_field( !empty( $_GET['section'] ) ) ? sanitize_text
 ?>
 <div class="areoi-sidebar">
 	<div class="areoi-sidebar__content">
-		<?php if ( !areoi_is_lightspeed() ) : ?>
-			<h1><img style="display: block;" src="<?php echo esc_url( AREOI__PLUGIN_URI . 'assets/img/areoi-logo-dark.svg' ) ?>" width="150"></h1>
-		<?php endif; ?>
-		
+		<h1><img style="display: block;" src="<?php echo esc_url( AREOI__PLUGIN_URI . 'assets/img/areoi-logo-dark.svg' ) ?>" width="150"></h1>
+
+
 		<ul class="areoi-sidebar__list">
 			<?php foreach ( $page['children'] as $child_key => $child) : ?>
 				<?php if ( $child_key == 'areoi-dashboard' || get_option( 'areoi-dashboard-global-bootstrap-css', 1 ) == 1 ) : ?>

@@ -612,12 +612,6 @@ function areoi_get_option_color( $option, $default )
 	return $value;
 }
 
-function areoi_is_lightspeed()
-{
-	$current_theme = wp_get_theme();
-	return ( $current_theme && $current_theme->template == 'lightspeed' ) || areoi2_get_option( 'areoi-dashboard-global-include-lightspeed', false );
-}
-
 function areoi_has_plugin( $plugin )
 {
 	return in_array( $plugin, areoi2_get_option('active_plugins') );

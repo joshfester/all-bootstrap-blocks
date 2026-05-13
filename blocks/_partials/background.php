@@ -16,11 +16,6 @@ $background_utility = !empty( $attributes['background_utility'] ) ? esc_attr( $a
 
 $background = '';
 
-$background_pattern = '';
-if ( areoi_is_lightspeed() ) {
-	$background_pattern = include( AREOI__PLUGIN_DIR . 'blocks/_partials/patterns.php' );
-}
-
 if ( !empty( $attributes['background_display'] ) ) {
 	$background = '
 		<div class="areoi-background ' . $background_utility . ' ' . areoi_get_background_display_class_str( $attributes, 'block' )  . '">
@@ -61,4 +56,4 @@ if ( !empty( $attributes['background_display'] ) ) {
 	';
 }
 
-return $background . $background_pattern;
+return $background;

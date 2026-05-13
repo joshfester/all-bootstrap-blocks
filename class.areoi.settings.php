@@ -71,14 +71,13 @@ class AREOI_Settings
 	{
 		$page 		= self::get_settings();
 
-		add_menu_page( 
-			__( $page['name'], AREOI__TEXT_DOMAIN ), 
-			$page['name'], 
-			'manage_options', 
-			$page['slug'], 
-			array( 'AREOI_Settings', 'add_pages' ), 
-			$page['icon'], 
-			60
+		add_submenu_page(
+			'themes.php',
+			__( $page['name'], AREOI__TEXT_DOMAIN ),
+			$page['name'],
+			'manage_options',
+			$page['slug'],
+			array( 'AREOI_Settings', 'add_pages' )
 		);
 
 		foreach ( $page['children'] as $child_key => $child ) {
@@ -110,26 +109,14 @@ class AREOI_Settings
 			array( 'AREOI_Settings', 'add_reset_settings' )
 		);
 
-		add_submenu_page( 
-			$page['slug'], 
-			'Credits', 
-			'Credits', 
-			'manage_options', 
-			'areoi-credits', 
+		add_submenu_page(
+			$page['slug'],
+			'Credits',
+			'Credits',
+			'manage_options',
+			'areoi-credits',
 			array( 'AREOI_Settings', 'add_credits' )
 		);
-
-		if ( areoi_is_lightspeed() ) {
-			add_menu_page( 
-				__( 'Lightspeed', AREOI__TEXT_DOMAIN ), 
-				'Lightspeed', 
-				'manage_options', 
-				AREOI__PREPEND . '-lightspeed', 
-				array( 'AREOI_Settings', 'add_pages' ), 
-				'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyNS40LjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAxMDAgMTAwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojQTdBQUFEO30NCjwvc3R5bGU+DQo8Zz4NCgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNDUuOCwwLjlMMi42LDk5LjFsMCwwYzEzLjksMCwyNi41LTguNCwzMi4xLTIwLjlMNjguOCwwLjlINDUuOHoiLz4NCgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNzMuNyw3Ni44YzkuMSwwLDE3LjQsMy41LDIzLjcsOS44TDczLjcsMzIuOUw1MCw4Ni42QzU2LjMsODEsNjQuNiw3Ni44LDczLjcsNzYuOHoiLz4NCjwvZz4NCjwvc3ZnPg0K', 
-				60
-			);
-		}
 	}
 
 	public static function add_pages()
@@ -419,17 +406,6 @@ class AREOI_Settings
 				'priority'	=> 60,
 				'sections'	=> self::load_settings( 'components' )
 			);
-
-			if ( areoi_is_lightspeed() ) {
-
-				$rows['children'][AREOI__PREPEND . '-lightspeed'] = array(
-					'name'		=> 'Lightspeed',
-					'slug' 		=> AREOI__PREPEND . '-lightspeed',
-					'icon'		=> '',
-					'priority'	=> 60,
-					'sections'	=> self::load_settings( 'lightspeed' )
-				);
-			}
 		}
 
 		return $rows;

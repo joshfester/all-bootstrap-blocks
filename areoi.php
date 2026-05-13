@@ -1,7 +1,7 @@
 <?php
 /**
  * @package All Bootstrap Blocks
- * @version 2.1.1
+ * @version 3.0.0
  *
  * Plugin Name:     All Bootstrap Blocks
  * Text Domain:     all-bootstrap-blocks
@@ -9,12 +9,12 @@
  * Description:     Create fully responsive Bootstrap 5 page layouts. 37 free blocks including containers, rows, columns, modals, accordions, cards, buttons and much more.
  * Author:          AREOI
  * Author URI:      https://areoi.io/
- * Version:         2.1.1
+ * Version:         3.0.0
  * License:         GPL v2 or later
  * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
 */
 
-$areoi_version = '2.1.1';
+$areoi_version = '3.0.0';
 
 // Make sure we don't expose any info if called directly
 if ( !function_exists( 'add_action' ) ) {
@@ -28,8 +28,6 @@ define( 'AREOI__NAME', 'AREOI' );
 define( 'AREOI__MINIMUM_WP_VERSION', '5.8' );
 define( 'AREOI__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'AREOI__PLUGIN_URI', plugin_dir_url( __FILE__ ) );
-define( 'AREOI__PLUGIN_LIGHTSPEED_DIR', plugin_dir_path( __FILE__ ) . 'lightspeed/' );
-define( 'AREOI__PLUGIN_LIGHTSPEED_URI', plugin_dir_url( __FILE__ ) . 'lightspeed/' );
 define( 'AREOI__PREPEND', 'areoi' );
 define( 'AREOI__TEXT_DOMAIN', 'all-bootstrap-blocks' );
 
@@ -45,8 +43,6 @@ require_once( AREOI__PLUGIN_DIR . 'class.areoi.api.php' );
 require_once( AREOI__PLUGIN_DIR . 'class.areoi.activate.php' );
 require_once( AREOI__PLUGIN_DIR . 'class.areoi.export.php' );
 require_once( AREOI__PLUGIN_DIR . 'class.areoi.reset.php' );
-require_once( AREOI__PLUGIN_LIGHTSPEED_DIR . 'classes/class.areoi.plugins.php' );
-require_once( AREOI__PLUGIN_LIGHTSPEED_DIR . 'classes/class.areoi.lightspeed.php' );
 
 define( 'AREOI__BOOTSTRAP_VERSION', areoi2_get_option( 'areoi-dashboard-global-bootstrap-version', '5.0.2' ) );
 

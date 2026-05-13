@@ -4,7 +4,7 @@ Tags: Bootstrap, Bootstrap Blocks, Bootstrap 5
 Requires at least: 5
 Tested up to: 6.8
 Requires PHP: 7.0
-Stable tag: 2.1.1
+Stable tag: 3.0.0
 License: GPL v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -111,6 +111,10 @@ Bootstrap is included. However you have the ability to switch this off in your W
 [Please add any feature requests or bugs within the support section.](https://wordpress.org/support/plugin/all-bootstrap-blocks/)
 
 == Changelog ==
+
+= 3.0.0 =
+* BREAKING: Removed the Lightspeed theme integration entirely — all Lightspeed-specific blocks, settings pages, scripts, and the second top-level admin menu have been deleted. Sites that depended on Lightspeed features should stay on 2.x.
+* UPDATE: Moved the plugin's settings UI from a top-level admin menu to a submenu under Appearance → Bootstrap.
 
 = 2.1.1 =
 * FIX: The 'Disable all plugin scripts and stylesheets' option no longer breaks the block editor. With it enabled, plugin blocks still appear and work in Gutenberg while Bootstrap CSS/JS (frontend and editor) and plugin frontend assets remain suppressed.

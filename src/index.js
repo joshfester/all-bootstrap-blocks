@@ -41,6 +41,7 @@ import '../blocks/toast-header/block.js';
 import '../blocks/toast-body/block.js';
 import '../blocks/icon/block.js';
 import '../blocks/tabs/block.js';
+import '../blocks/tab-pane/block.js';
 
 import '../blocks/banner/block.js';
 import '../blocks/banner-item/block.js';

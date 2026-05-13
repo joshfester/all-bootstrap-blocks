@@ -28,9 +28,9 @@ function areoi_render_block_nav_and_tab( $attributes, $content )
 	);
 
 	$output = '
-		<nav ' . areoi_return_id( $attributes ) . ' class="' . areoi_format_block_id( $attributes['block_id'] ) . ' ' . $class . '">
-			' . $content . ' 
-		</nav>
+		<ul ' . areoi_return_id( $attributes ) . ' class="' . areoi_format_block_id( $attributes['block_id'] ) . ' ' . $class . '" role="tablist">
+			' . $content . '
+		</ul>
 	';
 
 	return $output;

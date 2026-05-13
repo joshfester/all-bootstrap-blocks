@@ -4,7 +4,7 @@ Tags: Bootstrap, Bootstrap Blocks, Bootstrap 5
 Requires at least: 5
 Tested up to: 6.8
 Requires PHP: 7.0
-Stable tag: 2.0.0
+Stable tag: 2.1.0
 License: GPL v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -111,6 +111,12 @@ Bootstrap is included. However you have the ability to switch this off in your W
 [Please add any feature requests or bugs within the support section.](https://wordpress.org/support/plugin/all-bootstrap-blocks/)
 
 == Changelog ==
+
+= 2.1.0 =
+* FEATURE: Tabs now emit Bootstrap 5 markup — `<ul>`/`<li>` nav with `<button data-bs-toggle="tab">`, full ARIA wiring (`role`, `aria-controls`, `aria-selected`, `aria-labelledby`, `tabindex`), and a `tab-content` wrapper around panes.
+* FEATURE: New `Tab Pane` block (`areoi/tab-pane`) renders `<div class="tab-pane fade [show active]" role="tabpanel">`. The Tabs block now uses it for its auto-generated panes.
+* UPDATE: Nav & Tab Item now auto-switches between `<button>` (when its URL is an in-page anchor like `#tab-1`) and `<a>` (regular URLs) — plain nav-pills menus still work as before.
+* FIX: Tabs created with the Tabs block now actually switch on click — Bootstrap's tab JS is bound via `data-bs-toggle="tab"`.
 
 = 2.0.0 =
 * FEATURE: Added Bootstrap 5.3.8 and set it as the new default version (was 5.0.2).

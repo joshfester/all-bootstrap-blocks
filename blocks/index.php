@@ -32,6 +32,7 @@ $block_folders = array(
 	'modal-body',
 	'modal-footer',
 	'tabs',
+	'tab-pane',
 	'nav-and-tab',
 	'nav-and-tab-item',
 	'offcanvas',

@@ -1,0 +1,9 @@
+{
+  "name": "joshfester/all-bootstrap-blocks",
+  "description": "Forked All Bootstrap Blocks plugin for Grammy site.",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "composer/installers": "^1.0 || ^2.0"
+  }
+}

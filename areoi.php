@@ -1,7 +1,7 @@
 <?php
 /**
  * @package All Bootstrap Blocks
- * @version 3.0.0
+ * @version 3.0.1
  *
  * Plugin Name:     All Bootstrap Blocks
  * Text Domain:     all-bootstrap-blocks
@@ -9,12 +9,12 @@
  * Description:     Create fully responsive Bootstrap 5 page layouts. 37 free blocks including containers, rows, columns, modals, accordions, cards, buttons and much more.
  * Author:          AREOI
  * Author URI:      https://areoi.io/
- * Version:         3.0.0
+ * Version:         3.0.1
  * License:         GPL v2 or later
  * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
 */
 
-$areoi_version = '3.0.0';
+$areoi_version = '3.0.1';
 
 // Make sure we don't expose any info if called directly
 if ( !function_exists( 'add_action' ) ) {
@@ -52,8 +52,7 @@ add_action( 'init', array( 'AREOI_Blocks', 'init' ) );
 add_action( 'init', array( 'AREOI_Settings', 'init' ) );    
 add_action( 'init', array( 'AREOI_Styles', 'init' ) ); 
 add_action( 'init', array( 'AREOI_Export', 'init' ) );   
-add_action( 'init', array( 'AREOI_Reset', 'init' ) );   
-add_action( 'init', array( 'AREOI_Plugins', 'init' ) );    
+add_action( 'init', array( 'AREOI_Reset', 'init' ) );
 add_action( 'rest_api_init', array( 'AREOI_Api', 'init' ) );
 register_activation_hook( __FILE__, array( 'AREOI_Activate', 'init' ) );
 

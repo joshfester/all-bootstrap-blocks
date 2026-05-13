@@ -4,7 +4,7 @@ Tags: Bootstrap, Bootstrap Blocks, Bootstrap 5
 Requires at least: 5
 Tested up to: 6.8
 Requires PHP: 7.0
-Stable tag: 3.0.0
+Stable tag: 3.0.1
 License: GPL v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -111,6 +111,9 @@ Bootstrap is included. However you have the ability to switch this off in your W
 [Please add any feature requests or bugs within the support section.](https://wordpress.org/support/plugin/all-bootstrap-blocks/)
 
 == Changelog ==
+
+= 3.0.1 =
+* FIX: Resolve fatal error on `init` after upgrading to 3.0.0 — the bootstrap file still registered an `init` hook for `AREOI_Plugins`, a class that was removed with the rest of the Lightspeed integration.
 
 = 3.0.0 =
 * BREAKING: Removed the Lightspeed theme integration entirely — all Lightspeed-specific blocks, settings pages, scripts, and the second top-level admin menu have been deleted. Sites that depended on Lightspeed features should stay on 2.x.
